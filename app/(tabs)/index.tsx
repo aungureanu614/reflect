@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 export default function TabOneScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hello World!! 🌍</Text>
+      <Text style={styles.title}>Hello World 🌍</Text>
       <Text style={styles.subtitle}>Welcome to your React Native app</Text>
     </View>
   );
