@@ -2,18 +2,31 @@ import { Candle } from '@/components/Candle';
 import { SafeAreaView } from '@/components/layout/SafeAreaView';
 import { Text, View } from '@/components/layout/Themed';
 import { useRouter } from 'expo-router';
-import { Pressable, StyleSheet } from 'react-native';
+import { Pressable, StyleSheet, useColorScheme } from 'react-native';
 import { iOSUIKit } from 'react-native-typography';
 
 export default function Index() {
   const router = useRouter();
+  const colorScheme = useColorScheme();
 
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
+    <View style={styles.container}>
+      <SafeAreaView>
         <View>
-          <Text style={iOSUIKit.largeTitleEmphasized}>Welcome!</Text>
-          <Text style={iOSUIKit.body}>Begin with intention</Text>
+          <Text
+            style={
+              colorScheme === 'dark'
+                ? iOSUIKit.largeTitleEmphasizedWhite
+                : iOSUIKit.largeTitleEmphasized
+            }
+          >
+            Welcome!
+          </Text>
+          <Text
+            style={colorScheme === 'dark' ? iOSUIKit.bodyWhite : iOSUIKit.body}
+          >
+            Begin with intention
+          </Text>
         </View>
 
         <View style={styles.candle}>
@@ -36,8 +49,8 @@ export default function Index() {
         >
           <Text style={styles.reflectButtonText}>Reflect</Text>
         </Pressable>
-      </View>
-    </SafeAreaView>
+      </SafeAreaView>
+    </View>
   );
 }
 
