@@ -16,6 +16,13 @@ export default function Reflect() {
         <View style={styles.inner}>
           <Header title="Reflect" subtitle="What made you pause today?" />
 
+          {/**
+           * TODO:
+           * Use @react-native-community/datetimepicker to allow going backwards in time
+           * to see previous entries.
+           * Store all data in @react-native-async-storage/async-storage for local usage.
+           */}
+
           <View style={styles.inputs}>
             <TextInput
               style={[
