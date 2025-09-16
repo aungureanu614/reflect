@@ -48,9 +48,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  circleText: {
-    textAlign: 'center',
-  },
   reflectButtonText: {
     color: 'white',
     fontSize: 16,
