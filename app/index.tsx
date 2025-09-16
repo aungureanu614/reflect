@@ -1,9 +1,9 @@
 import { Candle } from '@/components/Candle';
+import Header from '@/components/Header';
 import { SafeAreaView } from '@/components/layout/SafeAreaView';
 import { Text, View } from '@/components/layout/Themed';
 import { useRouter } from 'expo-router';
 import { Pressable, StyleSheet, useColorScheme } from 'react-native';
-import { iOSUIKit } from 'react-native-typography';
 
 export default function Index() {
   const router = useRouter();
@@ -12,22 +12,7 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <SafeAreaView>
-        <View>
-          <Text
-            style={
-              colorScheme === 'dark'
-                ? iOSUIKit.largeTitleEmphasizedWhite
-                : iOSUIKit.largeTitleEmphasized
-            }
-          >
-            Welcome!
-          </Text>
-          <Text
-            style={colorScheme === 'dark' ? iOSUIKit.bodyWhite : iOSUIKit.body}
-          >
-            Begin with intention
-          </Text>
-        </View>
+        <Header title="Welcome" subtitle="Begin with intention." />
 
         <View style={styles.candle}>
           <Candle size={450} />
