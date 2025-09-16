@@ -3,11 +3,10 @@ import Header from '@/components/Header';
 import { SafeAreaView } from '@/components/layout/SafeAreaView';
 import { Text, View } from '@/components/layout/Themed';
 import { useRouter } from 'expo-router';
-import { Pressable, StyleSheet, useColorScheme } from 'react-native';
+import { Pressable, StyleSheet } from 'react-native';
 
 export default function Index() {
   const router = useRouter();
-  const colorScheme = useColorScheme();
 
   return (
     <View style={styles.container}>
