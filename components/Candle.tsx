@@ -50,7 +50,7 @@ export function Candle({ size = 200, onPress }: CandleProps) {
       flameAnimation.value = withTiming(0, { duration: 200 });
       wickGlow.value = withTiming(0, { duration: 200 });
     }
-  }, [isLit]);
+  }, [isLit, flameAnimation, wickGlow]);
 
   const flameAnimatedStyle = useAnimatedStyle(() => {
     const scaleY = interpolate(flameAnimation.value, [0, 1], [0.8, 1.2]);

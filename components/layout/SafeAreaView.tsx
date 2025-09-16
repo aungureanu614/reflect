@@ -1,7 +1,8 @@
+import { ReactNode } from 'react';
 import { SafeAreaView as SafeAreaViewComponent } from 'react-native-safe-area-context';
 import { View } from './Themed';
 
-export function SafeAreaView({ children }: { children: React.ReactNode }) {
+export function SafeAreaView({ children }: { children: ReactNode }) {
   return (
     <SafeAreaViewComponent style={{ flex: 1 }}>
       <View

@@ -11,7 +11,8 @@
     "test": "jest --watch --coverage=false --changedSince=origin/main",
     "testDebug": "jest -o --watch --coverage=false",
     "testFinal": "jest",
-    "updateSnapshots": "jest -u --coverage=false"
+    "updateSnapshots": "jest -u --coverage=false",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.2",
@@ -39,17 +40,25 @@
     "react-native-worklets": "0.5.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.35.0",
     "@testing-library/react-native": "^13.3.3",
     "@types/jest": "^30.0.0",
     "@types/react": "~19.1.0",
-    "eslint": "^9.0.0",
+    "eslint": "^9.35.0",
     "eslint-config-expo": "~10.0.0",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.4.0",
+    "husky": "^9.1.7",
     "jest": "~29.7.0",
     "jest-expo": "~54.0.11",
+    "lint-staged": "^16.1.6",
     "prettier": "^3.6.2",
-    "typescript": "~5.9.2"
+    "typescript": "~5.9.2",
+    "typescript-eslint": "^8.44.0"
   },
   "jest": {
     "preset": "jest-expo",
@@ -63,5 +72,12 @@
       "!**/.expo/**"
     ]
   },
-  "private": true
+  "private": true,
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --max-warnings 0 .",
+      "jest --findRelatedTests"
+    ]
+  }
 }
