@@ -6,4 +6,4 @@ Make sure you have Xcode installed and do an `npm install`.
 
 Then do `npx expo run:ios` to build the development build and install in the Simulator.
 
-Expo Go is not supported in this project because it is using `react-native-bottom-tabs` and requires some code that is not in Expo Go.
+Expo Go is not supported in this project because it is using `expo-router/unstable-native-tabs`, which requires native code that is not included in Expo Go.
