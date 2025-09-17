@@ -10,7 +10,9 @@ export default defineConfig(
   js.configs.recommended, // Basic ESLint recommended rules
   ts.configs.recommended, // TypeScript recommended rules
   {
-    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'], // Apply to JS/TS and JSX files
+    files: [
+      'app/**/*.ts, app/**/*.tsx, components/**/*.ts, components/**/*.tsx',
+    ],
     languageOptions: {
       parser: ts.parser, // Use TypeScript parser for all applicable files
       parserOptions: {
